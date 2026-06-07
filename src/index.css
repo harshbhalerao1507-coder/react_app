@@ -2,3 +2,15 @@ body {
   margin: 0;
   background: #000;
 }
+
+h1,h2,h3{
+    color: white;
+}
+
+p{
+  color: white;
+}
+
+.loading{
+  color: white;
+}
