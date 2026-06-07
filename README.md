@@ -4,31 +4,32 @@
 
 This project is a solution for the React Custom Hooks assignment.
 
-The main objective of this project is to create a reusable custom hook called **useFetch** that simplifies API data fetching in React applications. Instead of writing the same fetching logic inside multiple components, the hook handles loading, data, and error states in a single place.
+The main objective of this project is to create a reusable custom hook called **useFetch** that simplifies API data fetching in React applications. The hook manages data fetching, loading states, and error handling, allowing components to remain clean and focused on UI rendering.
 
-The project fetches product data from a public API and displays it in a simple user interface.
+The application fetches product data from a public API and displays products in a responsive grid layout.
 
 ---
 
 ## Features
 
-- Custom React Hook (`useFetch`)
-- Fetches data from any API URL
-- Loading state handling
-- Error state handling
-- Reusable and clean code structure
-- Simple and responsive UI
-- Easy to integrate into other React projects
+* Custom React Hook (`useFetch`)
+* Accepts any API URL as a parameter
+* Handles loading states
+* Handles error states
+* Reusable data-fetching logic
+* Displays product images, titles, and prices
+* Responsive grid layout using CSS
+* Clean and maintainable code structure
 
 ---
 
 ## Technologies Used
 
-- React
-- JavaScript (ES6+)
-- HTML
-- CSS
-- Fetch API
+* React
+* JavaScript (ES6+)
+* HTML
+* CSS
+* Fetch API
 
 ---
 
@@ -45,14 +46,10 @@ https://api.escuelajs.co/api/v1/products
 ```text
 src/
 │
-├── hooks/
-│   └── useFetch.js
-│
-├── components/
-│   └── ProductList.jsx
-│
+├── useFetch.js
 ├── App.jsx
 ├── App.css
+├── index.css
 └── main.jsx
 ```
 
@@ -60,21 +57,21 @@ src/
 
 ## How useFetch Works
 
-The custom hook accepts a URL as a parameter.
+The custom hook accepts a URL as a parameter:
 
 ```js
 const { data, loading, error } = useFetch(url);
 ```
 
-It internally:
+The hook:
 
-- Starts loading when the request begins
-- Fetches data from the API
-- Stores the response in state
-- Handles any errors that occur
-- Stops loading once the request is completed
+* Starts the loading state before making the request
+* Fetches data from the provided API URL
+* Stores the fetched data in state
+* Handles errors if the request fails
+* Updates the loading state when the request completes
 
-This allows components to focus only on displaying data instead of managing fetch logic.
+This makes the hook reusable across multiple components and projects.
 
 ---
 
@@ -89,7 +86,7 @@ git clone <your-github-repository-link>
 Navigate to the project folder:
 
 ```bash
-cd react-usefetch-hook
+cd react_app
 ```
 
 Install dependencies:
@@ -108,10 +105,11 @@ npm run dev
 
 ## Challenges Faced
 
-- Understanding when to use custom hooks instead of normal functions.
-- Managing loading and error states correctly.
-- Making the hook reusable for different API endpoints.
-- Avoiding unnecessary API calls during re-renders.
+* Understanding the purpose of custom hooks.
+* Managing asynchronous API requests.
+* Handling loading and error states correctly.
+* Making the hook reusable for different API endpoints.
+* Displaying API data dynamically in React.
 
 ---
 
@@ -119,21 +117,22 @@ npm run dev
 
 Through this project I learned:
 
-- How to create and use custom hooks in React
-- Managing asynchronous operations with hooks
-- Using `useState`, `useEffect`, and `useCallback`
-- Handling loading and error states effectively
-- Writing reusable and maintainable React code
+* How to create custom hooks in React.
+* How to use useState, useEffect, and useCallback together.
+* How to separate business logic from UI components.
+* How to fetch and display data from an API.
+* How to handle loading and error states effectively.
+* How to build reusable React code.
 
 ---
 
 ## Future Improvements
 
-- Add search functionality
-- Add pagination
-- Implement retry mechanism for failed requests
-- Add skeleton loaders for better user experience
-- Support POST, PUT, and DELETE requests
+* Add product search functionality.
+* Add category filtering.
+* Add pagination.
+* Add skeleton loaders.
+* Improve UI design and responsiveness.
 
 ---
 
@@ -141,12 +140,11 @@ Through this project I learned:
 
 The project has been deployed on Netlify and the source code is available on GitHub.
 
-- Netlify Link:https://mern-assignments5td.netlify.app/
-
+Netlify Link:
+https://mern-assignments5td.netlify.app/
 
 ---
 
 ## Author
 
-**Harsh BhalerAO**
-
+**Harsh Bhalerao**
